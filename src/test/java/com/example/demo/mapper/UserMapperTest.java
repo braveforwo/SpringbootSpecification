@@ -17,9 +17,13 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class UserMapperTest {
     @Autowired
-    JacocoCoverage jacocoCoverage;
+    UserMapper userMapper;
      @Test
      public void test(){
-         jacocoCoverage.doSomeThing();
+         User user = new User();
+         user.setPhonenumber("1111");
+         user.setUsername("1");
+         user.setPassword("2");
+         userMapper.insert(user);
             }
 }
