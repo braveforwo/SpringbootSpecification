@@ -71,50 +71,50 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <includes>
-                        <!-- 指定扫描规则 -->
-                        <include>**/*Test.java</include>
-                    </includes>
-                </configuration>
-                <!-- 经测试版本必须是2.12 -->
-                <version>2.12</version>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.5.201505241946</version>
-                <executions>
-                    <execution>
-                        <id>prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>post-unit-test</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
                 <!--<configuration>-->
-                    <!--<systemPropertyVariables>-->
-                        <!--<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>-->
-                    <!--</systemPropertyVariables>-->
+                    <!--<includes>-->
+                        <!--&lt;!&ndash; 指定扫描规则 &ndash;&gt;-->
+                        <!--<include>**/*Test.java</include>-->
+                    <!--</includes>-->
                 <!--</configuration>-->
-            </plugin>
+                <!--&lt;!&ndash; 经测试版本必须是2.12 &ndash;&gt;-->
+                <!--<version>2.12</version>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<groupId>org.jacoco</groupId>-->
+                <!--<artifactId>jacoco-maven-plugin</artifactId>-->
+                <!--<version>0.7.5.201505241946</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>prepare-agent</id>-->
+                        <!--<goals>-->
+                            <!--<goal>prepare-agent</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>report</id>-->
+                        <!--<phase>prepare-package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>report</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>post-unit-test</id>-->
+                        <!--<phase>test</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>report</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<systemPropertyVariables>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</systemPropertyVariables>&ndash;&gt;-->
+                <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
