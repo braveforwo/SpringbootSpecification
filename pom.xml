@@ -101,11 +101,22 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <goals>
+                            <goal>dump</goal>
+                        </goals>
+                        <configuration>
+                            <append>false</append>
+                            <address>127.0.0.1</address>
+                            <port>6300</port>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>report</id>
                         <phase>prepare-package</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <!--<configuration><outputDirectory>/</outputDirectory></configuration>-->
                     </execution>
                     <execution>
                         <id>post-unit-test</id>
