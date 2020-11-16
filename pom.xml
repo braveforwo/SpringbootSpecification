@@ -93,6 +93,12 @@
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+                        <configuration>
+                            <address>127.0.0.1</address>
+                            <port>6300</port>
+                            <append>false</append>
+                            <output>tcpserver</output>
+                        </configuration>
                     </execution>
                     <execution>
                         <id>report</id>
